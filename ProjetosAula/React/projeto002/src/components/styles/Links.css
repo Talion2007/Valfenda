@@ -1,0 +1,21 @@
+.links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #3b424f;
+    width: 75%;
+    background-color: #3b424f;
+    width: 25%;
+    text-align: left;
+    margin: 0%;
+
+    a{
+    text-decoration: none;
+    color: white;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+

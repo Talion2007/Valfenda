@@ -1,0 +1,14 @@
+.paragraph{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #2f353f;
+    width: 70%;
+    text-align: justify;
+    padding: 2.5%;
+
+    ul{
+      background-color: none;
+    }
+  }

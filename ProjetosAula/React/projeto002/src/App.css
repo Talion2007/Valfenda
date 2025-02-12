@@ -1,0 +1,20 @@
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #2f353f;
+  color: white;
+  width: 95vw;
+  margin: 0%;
+  padding: 0%;
+}
