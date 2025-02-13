@@ -3,6 +3,7 @@ import Text from "./components/Text";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Perfil from "./components/Perfil";
+import Perfill from "./components/Perfill";
 import "./App.css";
 
 function App() {
@@ -24,7 +25,12 @@ function App() {
         <List />
       </section>
 
-      <Perfil data={data} />
+<section>
+      <Perfill nome = "Vitor Hugo" descrição = "Negão" img = "https://i.pinimg.com/originals/d2/f3/28/d2f32866b1bdce2870d62f444052e433.jpg" />
+      <Perfill nome = "Murilo Correia" descrição = "Cara do Fone" img = "https://radiocentrocz.com.br/wp-content/uploads/2021/05/tim-maia-1989-%C2%A9-Divulgacao-1024x1024.jpg" />
+      <Perfill nome = "William Jr." descrição = "Gordinho do Dogão" img = "https://s3.pixers.pics/pixers/700/FO/35/15/95/09/700_FO35159509_11784272cce509c7baa809643031a58a.jpg" />
+</section>
+
 
       <Footer
         text="AlfaOne Development"
