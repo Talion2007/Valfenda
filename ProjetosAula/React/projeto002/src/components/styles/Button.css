@@ -40,4 +40,11 @@
     height: auto;
     width: 100%;
     padding: 2.5vw;
+
+    img {
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }

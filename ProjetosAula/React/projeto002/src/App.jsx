@@ -4,9 +4,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Button from "./components/Button";
 import Perfill from "./components/Perfill";
+import Cor from "./components/CorEscolha";
 import "./App.css";
 
 function App() {
+
+  const one = 1;
+  const two = -1;
 
   let Image = "https://th.bing.com/th?id=OSK.24d047cb0ec1edf45aee5c5a1157913e&w=102&h=102&c=7&o=6&dpr=1.3&pid=SANGAM"
 
@@ -26,8 +30,12 @@ function App() {
 </section>
 
 <section>
-  <Button text="Tira Essa Paixão da Cabeça" class="classOne" />
-  <Button text="Tira Essa Tristeza do Olhar" class="classDuo" />
+  <Button text="Tira Essa Paixão da Cabeça" class="classOne" operation = {one}/>
+  <Button text="Tira Essa Tristeza do Olhar" class="classDuo" operation = {two} />
+</section>
+
+<section>
+  <Cor />
 </section>
 
 
