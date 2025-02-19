@@ -9,7 +9,7 @@ function App() {
   const [i, setI] = useState(10);
   const [joia, setJoia] = useState(0);
   const [j, setJ] = useState(10);
-  const [end, setEnd] = useState()
+  const [end, setEnd] = useState("")
 
   function comprarVoto() {
     if (dinheiro >= 1) {
@@ -40,6 +40,7 @@ function App() {
     }
 
     if (i >= 10000000) {
+      setPreco((preco) => preco * 2);
       setI((i) => (i = "MAX"));
     }
   }
@@ -59,21 +60,30 @@ function App() {
     }
 
     if (j >= 10000000) {
-      setI((j) => (j = "MAX"));
+      setPreco((preco) => preco * 2);
+      setJ((j) => (j = "MAX"));
     }
   }
 
   function comprarBraslia() {
     if (joia >= 100000000) {
       setJoia(joia => joia - 100000000)
-      setEnd(end => end == "Você zerou o Game, Parabens!!!")
+      setEnd("Você Comprou Brasília, Parabens!!!")
     }
+  }
+
+  function moneyCash() {
+    setDinheiro(100000)
+    setVoto(300000)
+    setOuro(10000000)
+    setJoia(999999999)
   }
 
   return (
     <article>
-      <h1>Idle President - The Game</h1>
+      <h1>Idle President<button className="secreto" onClick={moneyCash}> - </button>The Game</h1>
       <img src={Collor}></img>
+      <h1>{end}</h1>
       <div>
         <p><strong>
           Votos: {voto}🔖 | Dinheiro: {dinheiro}💸 | Ouro: {ouro}💰 | Joia:{" "}
@@ -99,8 +109,6 @@ function App() {
       <div>
         <button onClick={comprarBraslia}>Comprar Brasília (1.000.000.000 joias)</button>
       </div>
-
-      <h2>{end}</h2>
     </article>
   );
 }
