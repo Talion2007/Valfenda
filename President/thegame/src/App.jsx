@@ -1,4 +1,5 @@
 import "./App.css";
+import Collor from "./assets/Collor.jpg"
 import { useState } from "react";
 function App() {
   const [voto, setVoto] = useState(0);
@@ -8,6 +9,7 @@ function App() {
   const [i, setI] = useState(10);
   const [joia, setJoia] = useState(0);
   const [j, setJ] = useState(10);
+  const [end, setEnd] = useState()
 
   function comprarVoto() {
     if (dinheiro >= 1) {
@@ -51,7 +53,7 @@ function App() {
 
   function aumentarPrecoJoia() {
     if (joia >= j) {
-      setOuro((ouro) => ouro - 10);
+      setJoia((joia) => joia - 10);
       setPreco((preco) => preco * 2);
       setJ((j) => j * 10);
     }
@@ -61,12 +63,21 @@ function App() {
     }
   }
 
+  function comprarBraslia() {
+    if (joia >= 100000000) {
+      setJoia(joia => joia - 100000000)
+      setEnd(end => end == "Você zerou o Game, Parabens!!!")
+    }
+  }
+
   return (
     <article>
+      <h1>Idle President - The Game</h1>
+      <img src={Collor}></img>
       <div>
-        <p>
+        <p><strong>
           Votos: {voto}🔖 | Dinheiro: {dinheiro}💸 | Ouro: {ouro}💰 | Joia:{" "}
-          {joia}💎 | Preço do Voto: {preco}x
+          {joia}💎 | Preço do Voto: {preco}x</strong>
         </p>
       </div>
 
@@ -84,6 +95,12 @@ function App() {
         <button onClick={comprarJoia}>Comprar Joia (100 ouros)</button>
         <button onClick={aumentarPrecoJoia}>Aumentar Preço ({j} joias)</button>
       </div>
+
+      <div>
+        <button onClick={comprarBraslia}>Comprar Brasília (1.000.000.000 joias)</button>
+      </div>
+
+      <h2>{end}</h2>
     </article>
   );
 }

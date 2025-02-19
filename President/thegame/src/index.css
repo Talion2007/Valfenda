@@ -22,12 +22,25 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
+:root{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+
+  background-image: url("./assets/brasilia.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0d0d0dff;
+  background-attachment: fixed;
 }
 
 h1 {
