@@ -1,14 +1,43 @@
+.ColorSet {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #313947;
+    width: 100%;
+    padding: 2%;
+}
+
 .Azul {
     color: yellow;
     background-color: red;
+}
+.Azul:hover{
+    background-color: blue;
+    color: whitesmoke;
 }
 
 .Amarelo {
     color: red;
     background-color: blue;
 }
+.Amarelo:hover{
+    background-color: yellow;
+    color: black;
+}
 
 .Vermelho {
     color: blue;
     background-color: yellow;
+}
+.Vermelho:hover{
+    background-color: red;
+    color: whitesmoke;
+}
+
+.Vermelho, .Amarelo, .Azul {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }

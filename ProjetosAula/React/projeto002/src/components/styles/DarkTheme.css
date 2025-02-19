@@ -1,0 +1,37 @@
+.DarkTheme, .LightTheme {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #313947;
+    width: 100%;
+    padding: 2%;
+}
+
+.DarkTheme {
+    img {
+        height: 10em;
+        width: 10em;
+        border-radius: 2em;
+        margin: 1em;
+        object-fit: cover; 
+    }
+
+    img:hover {
+        box-shadow: 0 0 2em darkred;
+    }
+}
+
+.LightTheme {
+    img {
+        height: 10em;
+        width: 10em;
+        border-radius: 2em;
+        margin: 1em;
+        object-fit: cover; 
+    }
+
+    img:hover {
+        box-shadow: 0 0 2em darkblue;
+    }
+}

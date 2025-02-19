@@ -31,7 +31,7 @@ function Button(props) {
     <article className="article">
       <button
         className={props.class}
-        onClick={() => setCount(count + props.operation)}
+        onClick={() => setCount(count => count + props.operation)}
       >
         {props.text}
       </button>

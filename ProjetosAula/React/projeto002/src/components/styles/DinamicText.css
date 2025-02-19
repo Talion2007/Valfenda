@@ -1,0 +1,42 @@
+.DinamicText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #3b424fff;
+    width: 100%;
+    padding: 2%;
+
+        .lula, 
+        .bolsonaro,
+        .dilma,
+        .eneas,
+        .getulio,
+        .janio,
+        .juscelino,
+        .itamar,
+        .haddad,
+        .collor {
+            height: 6em;
+            width: 6em;
+            border-radius: 50%;
+            margin: 1em;
+            object-fit: cover; 
+            display: block;
+
+        }
+        
+        img {
+            height: 6em;
+            width: 6em;
+            border-radius: 50%;
+            margin: 1em;
+            object-fit: cover; 
+            display: none;
+        }
+
+        p {
+            font-size: 1em;
+            margin: 0.5em;
+        }
+    }
