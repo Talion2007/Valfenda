@@ -34,7 +34,7 @@ function App() {
 
   function aumentarPrecoOuro() {
     if (ouro >= i) {
-      setOuro((ouro) => ouro - 10);
+      setOuro((ouro) => ouro - i);
       setPreco((preco) => preco * 2);
       setI((i) => i * 10);
     }
@@ -53,7 +53,7 @@ function App() {
 
   function aumentarPrecoJoia() {
     if (joia >= j) {
-      setJoia((joia) => joia - 10);
+      setJoia((joia) => joia - j);
       setPreco((preco) => preco * 2);
       setJ((j) => j * 10);
     }
