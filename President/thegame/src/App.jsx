@@ -76,7 +76,7 @@ function App() {
     setDinheiro(100000)
     setVoto(300000)
     setOuro(10000000)
-    setJoia(999999999)
+    setJoia(99087000)
   }
 
   return (
