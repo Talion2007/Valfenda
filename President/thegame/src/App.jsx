@@ -43,9 +43,9 @@ function App() {
   }
 
   function comprarJoia() {
-    if (ouro >= 10) {
+    if (ouro >= 100) {
       setJoia((joia) => joia + 1);
-      setOuro((ouro) => ouro - 10);
+      setOuro((ouro) => ouro - 100);
     }
   }
 
@@ -65,8 +65,8 @@ function App() {
     <article>
       <div>
         <p>
-          Votos: {voto}🔖 | Dinheiro: {dinheiro}💸 | Ouro: {ouro}💰 | Preço do
-          Voto: {preco}x
+          Votos: {voto}🔖 | Dinheiro: {dinheiro}💸 | Ouro: {ouro}💰 | Joia:{" "}
+          {joia}💎 | Preço do Voto: {preco}x
         </p>
       </div>
 
@@ -81,7 +81,7 @@ function App() {
       </div>
 
       <div>
-        <button onClick={comprarJoia}>Comprar Joia (10 ouros)</button>
+        <button onClick={comprarJoia}>Comprar Joia (100 ouros)</button>
         <button onClick={aumentarPrecoJoia}>Aumentar Preço ({j} joias)</button>
       </div>
     </article>

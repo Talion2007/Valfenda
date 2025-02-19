@@ -7,7 +7,7 @@ import Perfill from "./components/Perfill";
 import Cor from "./components/CorEscolha";
 import DinamicText from "./components/DinamicText";
 import DarkTheme from "./components/DarkTheme";
-import PurchaseVote from "./components/PurchaseVote";
+import Curtir from "./components/Curtir";
 
 import Bolsonaro from "./assets/Bolsonaro.jpg";
 import Lula from "./assets/Lula.jpg";
@@ -116,7 +116,9 @@ function App() {
         <Cor />
       </section>
 
-      <PurchaseVote/>
+      <section>
+        <Curtir/>
+      </section>
 
       <Footer text="AlfaOne Development" img={Image} />
     </>
