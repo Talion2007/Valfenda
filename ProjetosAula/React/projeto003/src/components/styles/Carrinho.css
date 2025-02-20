@@ -1,0 +1,17 @@
+.ddiv {
+    background-color: aquamarine;
+    text-align: center;
+    color: darkorchid;
+    border-radius: 1em;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    li{
+        width: 7.5em;
+    }
+}
