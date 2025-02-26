@@ -9,7 +9,6 @@ function Carrinho({ itens }) {
           {itens.map((item, index) => (
             <li key={index}>{item}</li>
           ))}{" "}
-          
         </ul>
       ) : (
         <p>Seu carrinho está vazio!</p>
