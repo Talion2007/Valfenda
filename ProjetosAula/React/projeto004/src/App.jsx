@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"
 
 import Seguir from "./components/1.1Seguir.jsx";
 import Notificacoes from "./components/1.2Notificacoes.jsx";
@@ -42,6 +42,7 @@ function App() {
   }
 
   return (
+
     <>
       <div className="Itens">
         <h2>1.1 - Botão “Seguir / Deixar de Seguirˮ</h2>
@@ -66,7 +67,6 @@ function App() {
         <p></p>
         <div>
           <button onClick={() => addProdutos(nomesProdutos)}>
-            {" "}
             Add {nomesProdutos}
           </button>
           <button className="Delete" onClick={clearAllProdutos}>
@@ -105,7 +105,7 @@ function App() {
 
       <div className="Itens">
         <h2>3.1 - Sistema de Avaliação com Estrelas</h2>
-        <Avaliacao/>
+        <Avaliacao />
       </div>
 
       <div className="Itens">

@@ -9,14 +9,14 @@ function Avaliacao() {
 
   const renderEstrelas = () => {
     const estrelas = [];
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 10; i++) {
       estrelas.push(
         <span
           key={i}
           onClick={() => handleClick(i)}
           style={{ cursor: 'pointer', color: i <= avaliacao ? 'gold' : 'gray', fontSize: '2vw' }}
         >
-        𓇼
+        ⁜
         </span>
       );
     }
