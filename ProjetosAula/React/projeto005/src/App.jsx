@@ -1,23 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
 import './App.css'
 
 function App() {
-
-  function Home() {
-    return (
-      <div className="App">
-        <h1>Home</h1>
-      </div>
-    );
-  }
-
-  function About() {
-    return (
-      <div className="App">
-        <h1>About</h1>
-      </div>
-    );
-  }
 
   return (
     <>
@@ -31,4 +17,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
