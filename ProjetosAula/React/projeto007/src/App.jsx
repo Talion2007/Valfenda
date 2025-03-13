@@ -20,9 +20,8 @@ function App() {
       <div>
         <h1>{count >= 1 ? "Jogo do Tempo - Clique: " : "Jogo do Tempo - Espere: "}</h1>
         <p>{count} ms</p>
-        {count >= 1 ? <button onClick={() => setStop(false)}>Pare!!!!!</button> : <button>Espere...</button>}
         <br></br>
-        {stop == false ? <button onClick={() => { setAcao(true); setTime(Math.random() *100); setCount(0); setStop(true)}}>Reiniciar</button> : "" }
+        {stop == false ? <button onClick={() => { setAcao(true); setTime(Math.random() *100); setCount(0); setStop(true)}}>Reiniciar</button> : count >= 1 ? <button onClick={() => setStop(false)}>Pare!!!!!</button> : <button>Espere...</button> }
       </div>
     );
 }
