@@ -1,0 +1,32 @@
+.Sex {
+    background-color: darkolivegreen;
+    color: #3671C6;
+    width: auto;
+    box-shadow: 7.5px 7.5px;
+    margin: 1em;
+    padding: 0.75em;
+    text-align: left;
+
+    .Shop{
+        display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:flex-end;
+    text-align: center;
+     box-shadow: 1px 1px;
+    }
+
+    h2 {
+        margin: 0%;
+        text-decoration: underline;
+    }
+
+    div{
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    img {
+        width: 5vw;
+    }
+}
