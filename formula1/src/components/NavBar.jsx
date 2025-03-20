@@ -14,6 +14,11 @@ function NavBar() {
                         <h2>Drivers</h2>
                     </Link>
                 </li>
+                <li>
+                    <Link to="/sprints">
+                        <h2>Sprints</h2>
+                    </Link>
+                </li>
             </ul>
         </nav>
     )

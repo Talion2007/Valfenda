@@ -11,7 +11,7 @@ function Drivers() {
   useEffect(() => {
     async function fetchUsers() {
       try {
-        const response = await fetch('https://api.openf1.org/v1/drivers?&session_key=9158')
+        const response = await fetch('https://api.openf1.org/v1/drivers?&session_key=9159')
         if (!response.ok) {
           throw new Error("Fudeu")
         }
@@ -32,31 +32,34 @@ function Drivers() {
     <>
 
       <Header />
-
       <section>
 
-        {loading ?
-          <p>Carregando...</p> :
-          <>{users.map((user) => (
-            <div key={user.id} className='CardDriver' style={{ backgroundColor: '#' + user.team_colour }}>
+        <h1 className="title">Drivers - F1 2023</h1>
 
-              <div className="BlockOne">
-                <h1 style={{ color: '#' + user.team_colour }}>{user.driver_number.toLocaleString(`en-US`, {
-                  minimumIntegerDigits: 2
-                })}</h1>
-                <img src={user.headshot_url}></img>
+        <article>
+
+          {loading ?
+            <p>Carregando...</p> :
+            <>{users.map((user) => (
+              <div key={user.id} className='CardDriver' style={{ backgroundColor: '#' + user.team_colour }}>
+
+                <div className="BlockOne">
+                  <h1 style={{ color: '#' + user.team_colour }}>{user.driver_number.toLocaleString(`en-US`, {
+                    minimumIntegerDigits: 2
+                  })}</h1>
+                  <img src={user.headshot_url}></img>
+                </div>
+
+                <div className='BlockTwo'>
+                  <h3>{user.full_name} ({user.name_acronym})</h3>
+                  <h4>{user.country_code} - {user.team_name}</h4>
+                </div>
               </div>
+            ))}</>}
 
-              <div className='BlockTwo'>
-                <h4>{user.full_name} ({user.name_acronym})</h4>
-                <p>{user.team}</p>
-                <p>Country: {user.country_code}</p>
-              </div>
-            </div>
-          ))}</>}
+          {error ? <p>Error</p> : ""}
 
-        {error ? <p>Error</p> : ""}
-
+        </article>
       </section>
 
 
