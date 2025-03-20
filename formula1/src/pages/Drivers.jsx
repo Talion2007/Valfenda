@@ -39,7 +39,7 @@ function Drivers() {
         <article>
 
           {loading ?
-            <p>Carregando...</p> :
+            <h1>Carregando...</h1> :
             <>{users.map((user) => (
               <div key={user.id} className='CardDriver' style={{ backgroundColor: '#' + user.team_colour }}>
 

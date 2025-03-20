@@ -39,7 +39,7 @@ function Sprints() {
 <article>
 
                 {loading ?
-                    <p>Carregando...</p> :
+                    <h1>Carregando...</h1> :
                     <>{users.map((user) => (
                         <div key={user.circuit_key} className="divRaces">
                             <p>City: {user.location} - Circuit: {user.circuit_short_name}</p>
