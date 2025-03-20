@@ -11,8 +11,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 60vh;
-  min-width: 100vw;
+  min-width: 100%;
 
   .title {
     padding: 1em;
@@ -32,11 +31,26 @@ section {
     border: antiquewhite 0.75em solid;
     margin: 1em;
     text-align: center;
+  box-shadow: #21212c 1.2em 1.2em 1.6em;
 
     p {
       width: auto;
       text-shadow: -1px 0 #15151fff, 0 1px #15151fff, 1px 0 #15151fff, 0 -1px #15151fff;
     }
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+   
+  select {
+    border: antiquewhite 0.25em solid;
+    background-color: #21212c;
+    border-radius: 1em;
+    color: antiquewhite;
   }
 }
 
@@ -46,6 +60,7 @@ section {
   margin: 1em;
   border: antiquewhite 0.75em solid;
   border-radius: 2em;
+  box-shadow: #21212c 1.2em 1.2em 1.6em;
 }
 
 .BlockOne {

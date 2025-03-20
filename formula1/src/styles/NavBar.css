@@ -20,9 +20,8 @@ nav {
         margin-left: auto;
         margin-right: auto;
 
-        padding: 0.25vw;
-        width: 5.25vw;
-        height: 5.25vw;
+        padding: 1.5vw;
+        width: auto;
     }
 
     button{

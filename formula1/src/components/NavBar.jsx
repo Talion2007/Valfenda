@@ -16,7 +16,12 @@ function NavBar() {
                 </li>
                 <li>
                     <Link to="/sprints">
-                        <h2>Sprints</h2>
+                        <h2>Sprints & Races</h2>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/pratices">
+                        <h2>Pratices</h2>
                     </Link>
                 </li>
             </ul>
