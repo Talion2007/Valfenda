@@ -56,9 +56,16 @@ form{
 }
 
 .all{
-  background-color: rgb(32, 178, 170, 0.75);
   padding: 0.5em;
   border-radius: 1rem;
+}
+
+.all.true{
+  background-color: rgba(172, 25, 155, 0.75);
+}
+
+.all.false{
+  background-color: rgb(32, 178, 170, 0.75);
 }
 
 .rocambole{

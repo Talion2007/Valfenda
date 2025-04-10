@@ -13,8 +13,9 @@ function Form() {
     const [carro, setCarro] = useState(() => localStorage.getItem('carro') || '');
     const [mensagem, setMensagem] = useState(false);
     const [termos, setTermos] = useState(false);
+    const [audioTocado, setAudioTocado] = useState(() => localStorage.getItem('audioTocado') || false);
+    const [tema, setTema] = useState(() => localStorage.getItem('tema') || true);
     const [erro, setErro] = useState("");
-    const [audioTocado, setAudioTocado] = useState(false);
 
     function submitted(e) {
         e.preventDefault();
@@ -51,10 +52,11 @@ function Form() {
         localStorage.setItem('carro', carro);
         localStorage.setItem('birthday', birthday);
         localStorage.setItem('termos', termos);
-    }, [name, email, genero, generoAlternativo, password, carro, birthday]);
+        localStorage.setItem('tema', tema);
+    }, [name, email, genero, generoAlternativo, password, carro, birthday, termos, tema]);
 
     return (
-        <div className="all">
+        <div className={`all ${tema}`}>
             <h1>Formulário</h1>
             <form onSubmit={submitted}>
                 <label>Enter your name:</label>
@@ -103,15 +105,19 @@ function Form() {
             {mensagem ? <div className="rocambole"><h2>Bem vindo, Enzzo Gay</h2>
                 <Contagem />
                 <br></br>
+                <label> Alterar Tema: 
+                <input type="checkbox" checked={tema} onChange={(e) => setTema(e.target.checked)} />
+                    </label>
+                <br></br>
                 <h3>Digite seu FeedBack: </h3>
                 <textarea placeholder="Digite aqui!" rows="5" cols="50"></textarea>
                 <button onClick={TocarAudio}>Enviar</button>
+            {audioTocado ? <>
+                <h2>FODASSE SUA OPINIÃO!</h2>
+                <audio src={Cantina} autoPlay loop></audio>
+            </> : null}
                 <br></br>
             </div> : <h2>Olá, você não é Enzzo</h2>}
-                {audioTocado ? <>
-                    <audio src={Gemido} autoPlay loop></audio>
-                    <h2>FODASSE SUA OPINIÃO!</h2>
-                </> : null}
         </div>
     )
 }
