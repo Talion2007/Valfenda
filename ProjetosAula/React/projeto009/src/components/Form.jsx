@@ -15,6 +15,8 @@ function Form() {
     const [termos, setTermos] = useState(false);
     const [audioTocado, setAudioTocado] = useState(() => localStorage.getItem('audioTocado') || false);
     const [tema, setTema] = useState(() => localStorage.getItem('tema') || true);
+    const [apelido, setApelido] = useState(() => localStorage.getItem('apelido') || '');
+    const [complemento, setComplemento] = useState(() => localStorage.getItem('complemento') || '');
     const [erro, setErro] = useState("");
 
     function submitted(e) {
@@ -105,17 +107,35 @@ function Form() {
             {mensagem ? <div className="rocambole"><h2>Bem vindo, Enzzo Gay</h2>
                 <Contagem />
                 <br></br>
-                <label> Alterar Tema: 
-                <input type="checkbox" checked={tema} onChange={(e) => setTema(e.target.checked)} />
-                    </label>
+                <label> Alterar Tema:
+                    <input type="checkbox" checked={tema} onChange={(e) => setTema(e.target.checked)} />
+                </label>
+                <br></br>
+                <h3>Nível Gay: {apelido * complemento}mil</h3>
+                <label>Escolha o Apelido:
+                    <select onChange={(e) => setApelido(e.target.value)} value={apelido}>
+                        <option value={10} >Enzzo</option>
+                        <option value={20} >Enzzinho</option>
+                        <option value={30} >Enzza</option>
+                        <option value={40} >Enzzete</option>
+                        <option value={50} >Biscate</option>
+                    </select>
+                    <select onChange={(e) => setComplemento(e.target.value)} value={complemento}>
+                        <option value={10} >Viado</option>
+                        <option value={20} >Gay</option>
+                        <option value={30} >Boiola</option>
+                        <option value={40} >Travesti</option>
+                        <option value={50} >do Itantingão</option>
+                    </select>
+                </label>
                 <br></br>
                 <h3>Digite seu FeedBack: </h3>
                 <textarea placeholder="Digite aqui!" rows="5" cols="50"></textarea>
                 <button onClick={TocarAudio}>Enviar</button>
-            {audioTocado ? <>
-                <h2>FODASSE SUA OPINIÃO!</h2>
-                <audio src={Cantina} autoPlay loop></audio>
-            </> : null}
+                {audioTocado ? <>
+                    <h2>FODASSE SUA OPINIÃO!</h2>
+                    <audio src={Cantina} autoPlay loop></audio>
+                </> : null}
                 <br></br>
             </div> : <h2>Olá, você não é Enzzo</h2>}
         </div>
