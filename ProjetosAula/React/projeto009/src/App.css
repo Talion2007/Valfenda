@@ -27,6 +27,16 @@ input, select, textarea {
   border: none;
 }
 
+input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, lightgreen, lightseagreen);
+  border-radius: 1em;
+}
+
+input[type=radio]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, lightgreen, lightseagreen);
+  border-radius: 1em;
+}
+
 textarea {
   font: inherit;
   margin: 1em;

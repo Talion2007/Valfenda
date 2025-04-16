@@ -12,6 +12,7 @@ function Form() {
     const [birthday, setBirthday] = useState(() => localStorage.getItem('birthday') || '');
     const [carro, setCarro] = useState(() => localStorage.getItem('carro') || '');
     const [mensagem, setMensagem] = useState(false);
+    const [porcentagem, setPorcentagem] = useState(() => localStorage.getItem('porcentagem') || 0);
     const [termos, setTermos] = useState(false);
     const [audioTocado, setAudioTocado] = useState(() => localStorage.getItem('audioTocado') || false);
     const [tema, setTema] = useState(() => localStorage.getItem('tema') || true);
@@ -28,6 +29,7 @@ function Form() {
         else if (password !== "08122007") setErro("Senha inválida");
         else if (carro !== "transformer") setErro("Carro Inválido");
         else if (birthday !== "2007-12-08") setErro("Nascimento Inválido");
+        else if (porcentagem != 101) setErro("Porcentagem Inválida");
         else if (!termos) setErro("Você deve aceitar os termos de uso.");
         else setErro("");
 
@@ -53,9 +55,10 @@ function Form() {
         localStorage.setItem('password', password);
         localStorage.setItem('carro', carro);
         localStorage.setItem('birthday', birthday);
+        localStorage.setItem('porcentagem', porcentagem);
         localStorage.setItem('termos', termos);
         localStorage.setItem('tema', tema);
-    }, [name, email, genero, generoAlternativo, password, carro, birthday, termos, tema]);
+    }, [name, email, genero, generoAlternativo, password, carro, birthday, termos, tema, porcentagem]);
 
     return (
         <div className={`all ${tema}`}>
@@ -97,6 +100,9 @@ function Form() {
                     <option value="fiat uno" >Fiat Uno</option>
                     <option value="transformer" >Transformer</option>
                 </select>
+                <label onChange={(e) => setPorcentagem(e.target.value)} for="porcentagem">Porcentagem Gay {porcentagem}%:
+                <input type="range" min="0" max="101" id="porcentagem" name="porcentagem"/>
+                </label>
                 <div>
                     <label>Termos: </label>
                     <input type="checkbox" onChange={(e) => setTermos(e.target.checked)} />
