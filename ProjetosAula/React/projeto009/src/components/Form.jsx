@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Cantina from "../assets/cantina.mp3"
-import Gemido from "../assets/gemido.mp3"
+import Fox from "./Fox"
 import Contagem from "../components/Contagem";
 
 function Form() {
@@ -134,6 +134,8 @@ function Form() {
                         <option value={50} >do Itantingão</option>
                     </select>
                 </label>
+                <br/>
+                <Fox/>
                 <br></br>
                 <h3>Digite seu FeedBack: </h3>
                 <textarea placeholder="Digite aqui!" rows="5" cols="50"></textarea>

@@ -65,6 +65,11 @@ form{
   background-color: rgb(135, 206, 250, 0.5);
 }
 
+img {
+  width:  30vw;
+  border-radius: 1em;
+}
+
 .all{
   padding: 0.5em;
   border-radius: 1rem;
