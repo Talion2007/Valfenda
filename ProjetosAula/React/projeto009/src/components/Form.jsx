@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Cantina from "../assets/gemido.mp3"
+import Cantina from "../assets/cantina.mp3"
 import Fox from "./Fox"
 import Contagem from "../components/Contagem";
 
@@ -18,7 +18,6 @@ function Form() {
     const [tema, setTema] = useState(() => localStorage.getItem('tema') || true);
     const [apelido, setApelido] = useState(() => localStorage.getItem('apelido') || '');
     const [complemento, setComplemento] = useState(() => localStorage.getItem('complemento') || '');
-    const [contagem, setContagem] = useState(() => localStorage.getItem('contagem') || false);
     const [erro, setErro] = useState("");
 
     function submitted(e) {
@@ -102,7 +101,7 @@ function Form() {
                     <option value="transformer" >Transformer</option>
                 </select>
                 <label onChange={(e) => setPorcentagem(e.target.value)} for="porcentagem">Porcentagem Gay {porcentagem}%:
-                <input type="range" min="0" max="101" id="porcentagem" name="porcentagem"/>
+                    <input type="range" min="0" max="101" id="porcentagem" name="porcentagem" />
                 </label>
                 <div>
                     <label>Termos: </label>
@@ -135,13 +134,9 @@ function Form() {
                         <option value={50} >do Itantingão</option>
                     </select>
                 </label>
-                <br/>
-                <Fox/>
-                <br></br>
-                <label>Veja, Enzzo: </label>
-                    <input type="checkbox" onChange={(e) => setContagem(e.target.checked)} />
-                    {contagem && <>    <iframe className="scribd_iframe_embed" title="sexo-entre-la-tia-y-el-sobrino-bruto-chikako" src="https://www.scribd.com/embeds/559255394/content?start_page=1&view_mode=scroll&access_key=key-SMWYQJVx5WA2P96pi6aZ" tabindex="0" data-auto-height="true" data-aspect-ratio="0.673134328358209" scrolling="no" width="100%" height="600" frameborder="0" ></iframe> <p> <a title="View sexo-entre-la-tia-y-el-sobrino-bruto-chikako on Scribd" href="https://www.scribd.com/document/559255394/sexo-entre-la-tia-y-el-sobrino-bruto-chikako#from_embed"> sexo-entre-la-tia-y-el-sobrino-bruto-chikako </a> by <a title="View pimientabravo's profile on Scribd" href="https://www.scribd.com/user/14522234/pimientabravo#from_embed" > pimientabravo </a> </p> </>}
-                <br/>
+                <br />
+                <Fox />
+                <br />
                 <h3>Digite seu FeedBack: </h3>
                 <textarea placeholder="Digite aqui!" rows="5" cols="50"></textarea>
                 <button onClick={TocarAudio}>Enviar</button>
