@@ -27,6 +27,12 @@ console.log(`Caneta's Tampa: ${caneta.tampa}`); // Output: "Sim"
 console.log("Funções:")
 console.log(caneta.escrever()); // Output: "Caneta bic está escrevendo na cor azul."
 console.log(caneta.tampar()); // Output: "Caneta esferográfica tem tampa? Sim."
+console.log("Alterar:")
+caneta.marca = "faber castell"; // Output: "faber castell"
+console.log(`Caneta's Nova Marca: ${caneta.marca}`); // Output: "faber castell"
+console.log("Criar:")
+caneta.atributoFudido = "Caneta Fudida"; // Adiciona um novo atributo
+console.log(`Caneta's AtributoFudido: ${caneta.atributoFudido}`); // Output: "fudido"
 
 //-------------------------------------------------------------------//
 
@@ -53,6 +59,12 @@ console.log(`Computador's Processador: ${computador.processador}`); // Output: "
 console.log("Funções:")
 console.log(computador.hardware()); // Output: "Computador acer tem processador intel i5."
 console.log(computador.caracteristicas()); // Output: "Computador aspire 5 é da cor preto."
+console.log("Alterar:")
+computador.marca = "dell"; // Output: "dell"
+console.log(`Computador's Nova Marca: ${computador.marca}`); // Output: "dell"
+console.log("Criar:")
+computador.atributoFudido = "Computador Fudido"; // Adiciona um novo atributo
+console.log(`Computador's AtributoFudido: ${computador.atributoFudido}`); // Output: "fudido"
 
 //-------------------------------------------------------------------//
 
@@ -79,6 +91,12 @@ console.log(`Celular's Armazenamento: ${celular.armazenamento}`); // Output: "12
 console.log("Funções:")
 console.log(celular.hardware()); // Output: "Celular samsung tem armazenamento de 128GB."
 console.log(celular.caracteristicas()); // Output: "Celular galaxy s20 é da cor azul."
+console.log("Alterar:")
+celular.marca = "xiaomi"; // Output: "xiaomi"
+console.log(`Celular's Nova Marca: ${celular.marca}`); // Output: "xiaomi"
+console.log("Criar:")
+celular.atributoFudido = "Celular Fudido"; // Adiciona um novo atributo
+console.log(`Celular's AtributoFudido: ${celular.atributoFudido}`); // Output: "fudido"
 
 //-------------------------------------------------------------------//
 
@@ -105,6 +123,12 @@ console.log(`Mesa's Cor: ${mesa.cor}`); // Output: "marrom"
 console.log("Funções:")
 console.log(mesa.fabricacao()); // Output: "Mesa é feita de madeira e tem cor marrom."
 console.log(mesa.caracteristicas()); // Output: "Mesa tem tamanho grande e formato retangular."
+console.log("Alterar:")
+mesa.material = "plástico"; // Output: "plástico"
+console.log(`Mesa's Novo Material: ${mesa.material}`); // Output: "plástico"
+console.log("Criar:")
+mesa.atributoFudido = "Mesa Fudida"; // Adiciona um novo atributo
+console.log(`Mesa's AtributoFudido: ${mesa.atributoFudido}`); // Output: "fudido"
 
 //-------------------------------------------------------------------//
 
@@ -131,6 +155,12 @@ console.log(`Calça's Tipo: ${calça.tipo}`); // Output: "jeans"
 console.log("Funções:")
 console.log(calça.fabricacao()); // Output: "Calça é da marca levis e tem cor preto."
 console.log(calça.caracteristicas()); // Output: "Calça tem tamanho 42 e tipo jeans."
+console.log("Alterar:")
+calça.marca = "adidas"; // Output: "adidas"
+console.log(`Calça's Nova Marca: ${calça.marca}`); // Output: "adidas"
+console.log("Criar:")
+calça.atributoFudido = "Calça Fudida"; // Adiciona um novo atributo
+console.log(`Calça's AtributoFudido: ${calça.atributoFudido}`); // Output: "fudido"
 
 //-------------------------------------------------------------------//
 
@@ -157,6 +187,12 @@ console.log(`Mochila's Material: ${mochila.material}`); // Output: "nylon"
 console.log("Funções:")
 console.log(mochila.fabricacao()); // Output: "Mochila é da marca nike e tem cor preto."
 console.log(mochila.caracteristicas()); // Output: "Mochila tem tamanho grande e material nylon."
+console.log("Alterar:")
+mochila.marca = "puma"; // Output: "puma"
+console.log(`Mochila's Nova Marca: ${mochila.marca}`); // Output: "puma"
+console.log("Criar:")
+mochila.atributoFudido = "Mochila Fudida"; // Adiciona um novo atributo
+console.log(`Mochila's AtributoFudido: ${mochila.atributoFudido}`); // Output: "fudido"
 
 //-------------------------------------------------------------------//
 
@@ -183,6 +219,12 @@ console.log(`Cadeira's Tipo: ${cadeira.tipo}`); // Output: "dobrável"
 console.log("Funções:")
 console.log(cadeira.fabricacao()); // Output: "Cadeira é feita de plástico e tem cor branco."
 console.log(cadeira.caracteristicas()); // Output: "Cadeira tem tamanho pequeno e tipo dobrável."
+console.log("Alterar:")
+cadeira.material = "madeira"; // Output: "madeira"
+console.log(`Cadeira's Novo Material: ${cadeira.material}`); // Output: "madeira"
+console.log("Criar:")
+cadeira.atributoFudido = "Cadeira Fudida"; // Adiciona um novo atributo
+console.log(`Cadeira's AtributoFudido: ${cadeira.atributoFudido}`); // Output: "fudido"
 
 //-------------------------------------------------------------------//
 
@@ -209,6 +251,12 @@ console.log(`Carro's Mexido: ${carro.mexido}`); // Output: "Sim"
 console.log("Funções:")
 console.log(carro.fabricacao()); // Output: "Carro é da marca fiat e tem cor branco."
 console.log(carro.caracteristicas()); // Output: "Carro modelo uno está mexido? Sim."
+console.log("Alterar:")
+carro.marca = "ford"; // Output: "ford"
+console.log(`Carro's Nova Marca: ${carro.marca}`); // Output: "ford"
+console.log("Criar:")
+carro.atributoFudido = "Carro Fudido"; // Adiciona um novo atributo
+console.log(`Carro's AtributoFudido: ${carro.atributoFudido}`); // Output: "fudido"
 
 //-------------------------------------------------------------------//
 
@@ -235,6 +283,12 @@ console.log(`Ferramenta's Material: ${ferramenta.material}`); // Output: "aço"
 console.log("Funções:")
 console.log(ferramenta.fabricacao()); // Output: "Ferramenta é do tipo chave de fenda e tem cor prata."
 console.log(ferramenta.caracteristicas()); // Output: "Ferramenta tem tamanho pequeno e material aço."
+console.log("Alterar:")
+ferramenta.tipo = "martelo"; // Output: "martelo"
+console.log(`Ferramenta's Novo Tipo: ${ferramenta.tipo}`); // Output: "martelo"
+console.log("Criar:")
+ferramenta.atributoFudido = "Ferramenta Fudida"; // Adiciona um novo atributo
+console.log(`Ferramenta's AtributoFudido: ${ferramenta.atributoFudido}`); // Output: "fudido"
 
 //-------------------------------------------------------------------//
 
@@ -261,5 +315,11 @@ console.log(`Livro's Editora: ${livro.editora}`); // Output: "HarperCollins"
 console.log("Funções:")
 console.log(livro.caracteristicas()); // Output: "Livro O Senhor dos Anéis é de J.R.R. Tolkien."
 console.log(livro.edicao()); // Output: "Publicado pela editora HarperCollins em 1954."
+console.log("Alterar:")
+livro.titulo = "O Hobbit"; // Output: "O Hobbit"
+console.log(`Livro's Novo Titulo: ${livro.titulo}`); // Output: "O Hobbit"
+console.log("Criar:")
+livro.atributoFudido = "Livro Fudido"; // Adiciona um novo atributo
+console.log(`Livro's AtributoFudido: ${livro.atributoFudido}`); // Output: "fudido"
 
 //-------------------------------------------------------------------//

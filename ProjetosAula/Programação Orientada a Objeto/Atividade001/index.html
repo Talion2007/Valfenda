@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>CDF</title>
+</head>
+
+<body>
+    <h1>Atividade sobre P.O.O. 👾</h1>
+    <button onclick="Perguntar()">Perguntar sobre um Gênero!</button>
+    <p id="Foda"></p>
+    <script>
+        let w = "";
+        let generoExiste = null;
+        let generoEscolhido = null;
+
+        const myObj = {
+            name: "Paulão",
+            age: 17,
+            sexo: "Helicóptero de Ataque",
+            oculos: "Sim",
+
+            generos: [
+                { name: "Aventura", filmes: ["Como treinar seu Dragão", "Os Incríveis", "Harry Potter e a Pedra Filosofal", "A Era do Gelo", "O Senhor dos Anéis, A Sociedade do Anel", "Os Vingadores"] },
+                { name: "Animação", filmes: ["Como treinar seu Dragão", "Os Incríveis", "A Era do Gelo"] },
+                { name: "Ação", filmes: ["Star Trek", "Star Wars, A Ameaça Fantasma", "Os Vingadores"] },
+                { name: "Ficção Cientifica", filmes: ["Star Trek", "Star Wars, A Ameaça Fantasma", "E.T."] },
+                { name: "Fantasia", filmes: ["Harry Potter e a Pedra Filosofal", "O Senhor dos Anéis, A Sociedade do Anel", "E.T."] }
+            ]
+        };
+
+        function Perguntar() {
+            generoExiste = "Não";
+            generoEscolhido = null;
+            w = "";
+
+            while (generoEscolhido == null || generoEscolhido == "") {
+                alert("Digite um Gênero!")
+                generoEscolhido = prompt()
+            }
+
+            for (let i in myObj.generos) {
+                if (generoEscolhido == myObj.generos[i].name) {
+                    generoExiste = "Sim"
+                }
+            }
+
+            alert(`O genero ${generoEscolhido} existe? ${generoExiste}`)
+
+            const k = myObj.generos.filter(e => e.name === generoEscolhido)[0];
+
+            if (k) {
+            w += `<hr/> <h2> ${k.name} </h2> <div class="Filmes">`;
+            for (let j in k.filmes) {
+                w += `<div class="box"> <h3>${k.filmes[j]}</h3> </div>`;
+            }
+            w += `</div>`
+        } else {
+            w = "Nenhum Item";
+        }
+
+        document.getElementById("Foda").innerHTML = `<h1>Nome: ${myObj.name} | Idade: ${myObj.age} | Sexo: "${myObj.sexo}" | Uso de óculos: ${myObj.oculos} <hr> <h2>Filmes Favoritos: </h2>  ${w} </h1>`;
+        }
+
+        Perguntar()
+    </script>
+</body>
+
+</html>

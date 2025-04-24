@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foda</title>
+</head>
+
+<body>
+    <h1>P.O.O.</h1>
+    <p id="Carro"></p>
+    <button onclick="showFiatCinquecento()">Cercar Fiat Cinquecento</button>
+    <button onclick="showFiatUno()">Cercar Fiat Uno</button>
+    <br />
+    <p id="Cercar"></p>
+    <p id="Enzzos"></p>
+
+    <hr>
+
+    <p id="Demo">Uahha</p>
+
+    <script>
+        console.log("Carro: ")
+
+        const carro = {
+            FiatCinquecento: {
+                marca: "Fiat",
+                modelo: "Cinquecento",
+                cor: "Rosso Italiano",
+                mexido: "Sì",
+            },
+
+            FiatUno: {
+                marca: "Fiat",
+                modelo: "Uno",
+                cor: "Branco",
+                mexido: "No",
+            },
+
+            fabricacaoCinquecento: function () {
+                return `Il carro è della marca ${this.FiatCinquecento.marca} e ha il colore ${this.FiatCinquecento.cor}`;
+            },
+            fabricacaoUno: function () {
+                return `Il carro è della marca ${this.FiatUno.marca} e ha lavori? ${this.FiatCinquecento.mexido}`;
+            },
+            caracteristicasCinquecento: function () {
+                return `Il modello della macchina è ${this.FiatCinquecento.modelo} e ha il colore ${this.FiatCinquecento.cor}`;
+            },
+            caracteristicasUno: function () {
+                return `Il modello della macchina è ${this.FiatUno.modelo} e ha lavori? ${this.FiatUno.mexido}`;
+            }
+        }
+
+        function showFiatCinquecento() {
+            document.getElementById("Carro").innerHTML = `Carro: ${carro.fabricacaoCinquecento()}! O ${carro.caracteristicasCinquecento()}!`;
+        }
+
+        function showFiatUno() {
+            document.getElementById("Carro").innerHTML = `Carro: ${carro.fabricacaoUno()}! O ${carro.caracteristicasUno()}!`;
+        }
+
+        let txt = "";
+        for (let x in carro) {
+            txt += carro[x] + "<br>";
+        }
+        document.getElementById("Demo").innerHTML = txt;
+        console.log(txt);
+
+        const endereco = {
+            rua: "Lavori Macarroni",
+            numero: 500,
+            complemento: "Parmegioni",
+            bairro: "Padre",
+            cidade: "Roma",
+            estado: "Italia",
+        }
+
+        let xtx = "";
+        for (let x in endereco) {
+            xtx += endereco[x] + "<br>";
+        }
+        document.getElementById("Cercar").innerHTML = `<h1>Endereço do Gaynzzo: </h1>` + xtx;
+
+        let y = ""
+        const myObj = {
+            name: "Enzzo",
+            age: 17,
+
+            cars: [
+                { name: "Fiat", models: ["Cinquecento", "Uno"] },
+                { name: "Caoa", models: ["Dolphin", "Cherry"] }
+            ]
+        }
+
+        for (let i in myObj.cars) {
+            y += `<h2> ${myObj.cars[i].name} </h2>`;
+            for (let j in myObj.cars[i].models) {
+                y += myObj.cars[i].models[j] + "<br/>";
+            }
+        }
+
+        document.getElementById("Enzzos").innerHTML = `<h1>The ${myObj.name}, with ${myObj.age}, has ${y}</h1>`
+    </script>
+</body>
+
+</html>
