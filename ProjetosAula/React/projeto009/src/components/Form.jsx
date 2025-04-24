@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Cantina from "../assets/cantina.mp3"
+import Cantina from "../assets/gemido.mp3"
 import Fox from "./Fox"
 import Contagem from "../components/Contagem";
 
