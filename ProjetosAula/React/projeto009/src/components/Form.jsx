@@ -13,11 +13,12 @@ function Form() {
     const [carro, setCarro] = useState(() => localStorage.getItem('carro') || '');
     const [mensagem, setMensagem] = useState(false);
     const [porcentagem, setPorcentagem] = useState(() => localStorage.getItem('porcentagem') || 0);
-    const [termos, setTermos] = useState(false);
+    const [termos, setTermos] = useState(() => localStorage.getItem('termos') || false);
     const [audioTocado, setAudioTocado] = useState(() => localStorage.getItem('audioTocado') || false);
     const [tema, setTema] = useState(() => localStorage.getItem('tema') || true);
     const [apelido, setApelido] = useState(() => localStorage.getItem('apelido') || '');
     const [complemento, setComplemento] = useState(() => localStorage.getItem('complemento') || '');
+    const [contagem, setContagem] = useState(() => localStorage.getItem('contagem') || false);
     const [erro, setErro] = useState("");
 
     function submitted(e) {
@@ -137,6 +138,10 @@ function Form() {
                 <br/>
                 <Fox/>
                 <br></br>
+                <label>Veja, Enzzo: </label>
+                    <input type="checkbox" onChange={(e) => setContagem(e.target.checked)} />
+                    {contagem && <>    <iframe className="scribd_iframe_embed" title="sexo-entre-la-tia-y-el-sobrino-bruto-chikako" src="https://www.scribd.com/embeds/559255394/content?start_page=1&view_mode=scroll&access_key=key-SMWYQJVx5WA2P96pi6aZ" tabindex="0" data-auto-height="true" data-aspect-ratio="0.673134328358209" scrolling="no" width="100%" height="600" frameborder="0" ></iframe> <p> <a title="View sexo-entre-la-tia-y-el-sobrino-bruto-chikako on Scribd" href="https://www.scribd.com/document/559255394/sexo-entre-la-tia-y-el-sobrino-bruto-chikako#from_embed"> sexo-entre-la-tia-y-el-sobrino-bruto-chikako </a> by <a title="View pimientabravo's profile on Scribd" href="https://www.scribd.com/user/14522234/pimientabravo#from_embed" > pimientabravo </a> </p> </>}
+                <br/>
                 <h3>Digite seu FeedBack: </h3>
                 <textarea placeholder="Digite aqui!" rows="5" cols="50"></textarea>
                 <button onClick={TocarAudio}>Enviar</button>

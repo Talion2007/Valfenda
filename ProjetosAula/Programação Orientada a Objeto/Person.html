@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Usando JS com HTML</h1>
+    <script>
+        const person = {
+            name: "Lucas",
+            age: 20,
+            job: "Programador",
+            hobbies: ["Estudar", "Jogar", "Assistir"],
+            greet: function() {
+                console.log(`Olá, meu nome é ${this.name} e eu tenho ${this.age} anos.`);
+            }
+        };
+        alert(person.name); // Acessando a propriedade name
+        alert(person.age); // Acessando a propriedade age
+        alert(person.job); // Acessando a propriedade job
+        alert(person.hobbies); // Acessando a propriedade hobbies
+    </script>
+</body>
+</html>
