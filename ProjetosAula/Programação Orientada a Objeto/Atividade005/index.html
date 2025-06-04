@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Carros</title>
+</head>
+
+<body>
+    <div>
+    <p id="resultado" class="text">Insira os dados para Começar</p>
+    <p id="custoViagem" class="text">Envie e selecione o Combustível que deseja ser calculado!</p>
+    </div>
+
+    <form id="formCarro" class="formCarro">
+        <input type="text" id="marca" placeholder="Marca do Carro" required />
+        <input type="text" id="modelo" placeholder="Modelo" required />
+        <input type="text" id="cor" placeholder="Cor do carro" required />
+        <input type="number" id="ano" placeholder="Ano do carro" required />
+        <input type="number" id="km" placeholder="Km a serem percorridos" required />
+        <input type="number" id="custoGasolina" placeholder="Custo da Gasolina (R$/litro)" required />
+        <input type="number" id="custoEtanol" placeholder="Custo do Etanol (R$/litro)" required />
+        <button type="button" id="submitBtn">Enviar</button>
+        <button type="button" id="btnEtanol">Custo com Etanol</button>
+        <button type="button" id="btnGasolina">Custo com Gasolina</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's That Pokémon?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Who's That Pokémon?</h1>
+
+        <div id="pokemon-display">
+            <img id="pokemon-sprite" src="" alt="Pokémon Silhouette">
+        </div>
+
+        <p id="load-error-info" style="display:none;">
+            Encountered <span id="error-count-value">0</span> issue(s) loading this Pokémon.
+        </p>
+        <p id="loading-message" style="display:none;">Loading Pokémon...</p>
+
+        <div id="controls">
+            <input type="text" id="guess-input" placeholder="Enter Pokémon name">
+            <button id="guess-button">Guess!</button>
+        </div>
+
+        <p id="feedback"></p>
+        <button id="next-pokemon-button" style="display: none;">Next Pokémon</button>
+
+        <div id="score-board">
+            <p>Score: <span id="score">0</span></p>
+            <p>Streak: <span id="streak">0</span></p>
+            <p>Wrong Answers: <span id="wrong-answers-count">0</span></p> <!-- This stays -->
+        </div>
+
+        <!-- The "missed-pokemon-section" has been removed -->
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

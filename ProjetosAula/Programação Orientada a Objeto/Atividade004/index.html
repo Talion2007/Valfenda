@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Animais</title>
+</head>
+
+<body>
+    <h1>O Reino Animal, tem uns bichos Interessantes: </h1>
+    <div class="container">
+    <h2>Gatos: </h2>
+    <div class="all">
+        <div class="geral">
+            <h3 id="gatoInfo">Metodos Gerais</h3>
+            <h3 id="gatoRabo">Herança Animal</h3>
+        </div>
+        <div class="especifico">
+            <h3 id="gatoArranhar">Metodos Especificos</h3>
+            <h3 id="gatoMorder">Atributos de Gatos</h3>
+        </div>
+    </div>
+
+    <form id="formGato">
+        <label for="pernasGato">Pernas:</label>
+        <input type="number" id="pernasGato" name="pernasGato" required /><br />
+
+        <label for="olhosGato">Olhos:</label>
+        <input type="number" id="olhosGato" name="olhosGato" required /><br />
+
+        <label for="rabinhoGato">Rabinho:
+            <select id="rabinhoGato" name="rabinhoGato" required>
+                <option value="">Selecione</option>
+                <option value="Sim">Sim</option>
+                <option value="Nao">Não</option>
+                <option value="Talvez">Talvez</option>
+            </select><br />
+        </label>
+
+        <label for="garra">Garras:</label>
+        <input type="number" id="garra" name="garra" required /><br />
+
+        <label for="dente">Dentes:</label>
+        <input type="number" id="dente" name="dente" required /><br />
+
+        <button type="submit">Enviar</button>
+    </form>
+    </div>
+
+    <br />
+
+    <div class="container">
+    <h2>Coelhos: </h2>
+    <div class="all">
+        <div class="geral">
+            <h3 id="coelhoInfo">Metodos Gerais</h3>
+            <h3 id="coelhoRabinho">Herança Animal</h3>
+        </div>
+        <div class="especifico">
+            <h3 id="coelhoCheirar">Metodos Específicos</h3>
+            <h3 id="coelhoOuvir">Atributos de Coelhos</h3>
+        </div>
+    </div>
+
+    <form id="formCoelho">
+        <label for="pernasCoelho">Pernas:</label>
+        <input type="number" id="pernasCoelho" name="pernasCoelho" required /><br />
+
+        <label for="olhosCoelho">Olhos:</label>
+        <input type="number" id="olhosCoelho" name="olhosCoelho" required /><br />
+
+        <label for="rabinhoCoelho">Rabinho:
+            <select id="rabinhoCoelho" name="rabinhoCoelho" required>
+                <option value="">Selecione</option>
+                <option value="Sim">Sim</option>
+                <option value="Nao">Não</option>
+                <option value="Talvez">Talvez</option>
+            </select><br />
+        </label>
+
+        <label for="orelhas">Orelhas:</label>
+        <input type="number" id="orelhas" name="orelhas" required /><br />
+
+        <label for="focinho">Focinho:</label>
+        <input type="number" id="focinho" name="focinho" required /><br />
+
+        <button type="submit">Enviar</button>
+    </form>
+    </div>
+
+    <br/>
+
+    <div class="container">
+    <h2>Cachorros: </h2>
+    <div class="all">
+        <div class="geral">
+            <h3 id="cachorroInfo">Metodos Gerais</h3>
+            <h3 id="cachorroRabinho">Herança Animal</h3>
+        </div>
+        <div class="especifico">
+            <h3 id="cachorroObedecer">Metodos Específicos</h3>
+            <h3 id="cachorroReproduzir">Atributos de Cachorros</h3>
+        </div>
+    </div>
+
+    <form id="formCachorro">
+        <label for="pernasCachorro">Pernas:</label>
+        <input type="number" id="pernasCachorro" name="pernasCachorro" required /><br />
+
+        <label for="olhosCachorro">Olhos:</label>
+        <input type="number" id="olhosCachorro" name="olhosCachorro" required /><br />
+
+        <label for="rabinhoCachorro">Rabinho:
+            <select id="rabinhoCachorro" name="rabinhoCachorro" required>
+                <option value="">Selecione</option>
+                <option value="Sim">Sim</option>
+                <option value="Nao">Não</option>
+                <option value="Talvez">Talvez</option>
+            </select><br />
+        </label>
+
+        <label for="donos">Donos:</label>
+        <input type="number" id="donos" name="donos" required /><br />
+
+        <label for="crias">Crias:</label>
+        <input type="number" id="crias" name="crias" required /><br />
+
+        <button type="submit">Enviar</button>
+    </form> 
+</div>
+
+<br/>
+
+<div class="container">
+    <audio controls>
+        <source src="./assets/erminiofelix-vol2-362718.mp3" type="audio/mp3">
+      </audio>
+</div>
+
+    <script src="./script.js">
+    </script>
+</body>
+
+</html>

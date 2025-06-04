@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Javascript</h1>
+    <br />
+    <h3>Criação do Objeto: </h3>
+    <p id="demo"></p>
+    <br />
+    <h3>Tentativa de Mudança negada com método Get: </h3>
+    <p id="demo1"></p>
+    <br />
+    <h3>Tentativa de Mudança aprovada com this.cnar: </h3>
+    <p id="demo2"></p>
+    <br />
+    <h3>Tentativa de Mudança aprovada com método Set: </h3>
+    <p id="demo3"></p>
+    <br />
+    <h3>Tentativa de Mudança negada com Set vazio: </h3>
+    <p id="demo4"></p>
+
+    <script>
+        class Car {
+            constructor(marca) {
+                this.cnar = marca;
+            }
+            get arnoldswazinegger() {
+                return this.cnar.toUpperCase()
+            }
+            set sylvesterstalone(x) {
+                if (x === "" || x === undefined) { return }
+                this.cnar = x
+            }
+        }
+
+        const myCar = new Car("Volkswagen")
+
+        document.getElementById("demo").innerHTML = myCar.arnoldswazinegger
+        myCar.arnoldswazinegger = "BYD"
+        document.getElementById("demo1").innerHTML = myCar.arnoldswazinegger
+        myCar.cnar = "Fiat"
+        document.getElementById("demo2").innerHTML = myCar.arnoldswazinegger
+        myCar.sylvesterstalone = "Ford"
+        document.getElementById("demo3").innerHTML = myCar.arnoldswazinegger
+        myCar.sylvesterstalone = ""
+        document.getElementById("demo4").innerHTML = myCar.arnoldswazinegger
+    </script>
+</body>
+
+</html>

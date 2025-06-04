@@ -1,0 +1,131 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #e3350d; /* Pokémon Red */
+    margin-bottom: 20px;
+}
+
+#pokemon-display {
+    margin-bottom: 20px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokemon-sprite {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transition: filter 0.3s ease-in-out;
+}
+
+#pokemon-sprite.silhouette {
+    filter: brightness(0) contrast(0%);
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#guess-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    flex-grow: 1;
+}
+
+#guess-button, #next-pokemon-button {
+    padding: 10px 15px;
+    background-color: #3b4cca; /* Pokémon Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+#guess-button:hover, #next-pokemon-button:hover {
+    background-color: #2a3aa8;
+}
+
+#next-pokemon-button {
+    background-color: #ffcb05; /* Pokémon Yellow */
+    color: #333;
+    margin-top: 10px;
+}
+
+#next-pokemon-button:hover {
+    background-color: #e6b804;
+}
+
+
+#feedback {
+    font-weight: bold;
+    min-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+#score-board {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+    border-top: 1px solid #eee; /* Optional: keep if you like the separator */
+    padding-top: 15px;        /* Optional: keep if you like the separator */
+}
+
+#score-board p {
+    margin: 5px 0;
+}
+
+#load-error-info {
+    color: #e67e22; /* Warning orange */
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+#feedback.critical-error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Removed styles for #missed-pokemon-section and #missed-pokemon-list */
