@@ -3,13 +3,12 @@ import { View, ScrollView, Image } from "react-native";
 export default function Galerry() {
 
     return (
-        <ScrollView horizontal style={{ flex: 1, marginVertical: 24, marginTop: 250 }}>
+        <ScrollView horizontal style={{ flex: 1}}>
             <View
                 style={{
                     width: 250,
                     height: 250,
                     backgroundColor: "#E1BEE7",
-                    margin: 20
                 }}
             >
                 <Image
@@ -25,7 +24,6 @@ export default function Galerry() {
                     width: 250,
                     height: 250,
                     backgroundColor: "#E1BEE7",
-                    margin: 20
                 }}
             >
                 <Image
@@ -41,7 +39,6 @@ export default function Galerry() {
                     width: 250,
                     height: 250,
                     backgroundColor: "#E1BEE7",
-                    margin: 20
                 }}
             >
                 <Image
@@ -57,7 +54,6 @@ export default function Galerry() {
                     width: 250,
                     height: 250,
                     backgroundColor: "#E1BEE7",
-                    margin: 20
                 }}
             >
                 <Image
@@ -73,7 +69,6 @@ export default function Galerry() {
                     width: 250,
                     height: 250,
                     backgroundColor: "#E1BEE7",
-                    margin: 20
                 }}
             >
                 <Image
@@ -89,7 +84,6 @@ export default function Galerry() {
                     width: 250,
                     height: 250,
                     backgroundColor: "#E1BEE7",
-                    margin: 20
                 }}
             >
                 <Image
