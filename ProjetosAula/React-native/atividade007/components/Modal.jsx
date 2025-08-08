@@ -6,22 +6,24 @@ import {
   TouchableOpacity,
   StyleSheet,
   Alert,
-  TextInput
+  TextInput,
+  ScrollView,
+  Image,
 } from "react-native";
 
 export default function ConfirmacaoModal() {
   const [modalVisivel, setModalVisivel] = useState(false);
   const [contaDeletada, setContaDeletada] = useState(false);
-  const [senha , setSenha] = useState("");
+  const [senha, setSenha] = useState("");
 
   const confirmarAcaoPrimeira = () => {
-    if (senha !== "palmeirassemmundial") {
+    if (senha !== "palmeiras") {
       Alert.alert("Erro", "Senha incorreta. Tente novamente.");
       return;
     } else {
-    setModalVisivel(false);
-    setContaDeletada(true);
-    Alert.alert("Ação confirmada", "Sua conta foi deletada com sucesso!");
+      setModalVisivel(false);
+      setContaDeletada(true);
+      Alert.alert("Ação confirmada", "Sua conta foi deletada com sucesso!");
     }
   };
 
@@ -29,22 +31,72 @@ export default function ConfirmacaoModal() {
     setModalVisivel(false);
   };
   return (
-    <View style={styles.container}>
-      { contaDeletada === false ? (
-      <TouchableOpacity
-        style={styles.botaoPerigoso}
-        onPress={() => setModalVisivel(true)}
-      >
-        <Text style={styles.textoBotao}>Deletar Conta 🧕</Text>
-      </TouchableOpacity>
+    <ScrollView style={styles.container}
+    showsVerticalScrollIndicator={true}
+    >
+      {contaDeletada === false ? (
+        <TouchableOpacity
+          style={styles.botaoPerigoso}
+          onPress={() => setModalVisivel(true)}
+        >
+          <Text style={styles.textoBotao}>Deletar Conta 🧕</Text>
+        </TouchableOpacity>
       ) : (
-       <TouchableOpacity
-        style={styles.botaoPerigoso}
-        onPress={() => setContaDeletada(false)}
-      >
-        <Text style={styles.textoBotao}>Palmeiras não tem mundial 🤦‍♂️</Text>
-        <Text style={styles.textoBotao}>Bi - rebaixado e não tem mundial 🤦‍♂️</Text>
-      </TouchableOpacity>
+        <View>
+          <Image
+            source={{
+              uri: "https://deadline.com/wp-content/uploads/2025/05/Rambo-First-Blood.webp",
+            }}
+            style={{
+              width: 300,
+              height: 300,
+              alignSelf: "center",
+              marginBottom: 20,
+            }}
+          />
+                    <Image
+            source={{
+              uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM13NIPR5CRgTq1wNkteMdfse-sh70X8H_rQ&s",
+            }}
+            style={{
+              width: 300,
+              height: 300,
+              alignSelf: "center",
+              marginBottom: 20,
+            }}
+            />
+             <Image
+            source={{
+              uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWiEjZXAT1BgM8ZplSS7FSf_Gr4XJubTe0bA&s",
+            }}
+            style={{
+              width: 300,
+              height: 300,
+              alignSelf: "center",
+              marginBottom: 20,
+            }}
+            />
+             <Image
+            source={{
+              uri: "https://sm.ign.com/ign_pt/news/r/rambo-orig/rambo-origin-movie-in-the-works-from-the-director-of-sisu_gr6r.jpg",
+            }}
+            style={{
+              width: 300,
+              height: 300,
+              alignSelf: "center",
+              marginBottom: 20,
+            }}
+            />
+          <TouchableOpacity
+            style={styles.botaoPerigoso}
+            onPress={() => setContaDeletada(false)}
+          >
+            <Text style={styles.textoBotao}>Palmeiras não tem mundial 🤦‍♂️</Text>
+            <Text style={styles.textoBotao}>
+              Bi - rebaixado e não tem mundial 🤦‍♂️
+            </Text>
+          </TouchableOpacity>
+        </View>
       )}
 
       <Modal
@@ -65,7 +117,7 @@ export default function ConfirmacaoModal() {
 
             <TextInput
               style={styles.input}
-              secureTextEntry ={true}
+              secureTextEntry={true}
               placeholder="Digite sua senha para confirmar"
               placeholderTextColor="#888"
               value={senha}
@@ -90,21 +142,22 @@ export default function ConfirmacaoModal() {
           </View>
         </View>
       </Modal>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "lightgreen",
+    padding: 20,
   },
   botaoPerigoso: {
     backgroundColor: "#ff4444",
     padding: 15,
     borderRadius: 8,
+    marginTop: 10,
+    marginBottom: 70,
   },
   textoBotao: {
     color: "white",

@@ -13,6 +13,8 @@ import Lista from "./components/Lista"; // Importando o componente Lista
 import ModalComponent from "./components/Modal";
 import GaleriaModal from "./components/Galeria";
 import FormularioModal from "./components/Formulario";
+import GaleriaHorizontal from "./components/Senha";
+import ScrollInterativo from "./components/ScrollInterativo";
 const Drawer = createDrawerNavigator();
 // Componentes das telas
 // App principal
@@ -107,6 +109,16 @@ export default function App() {
           name="Formulario"
           component={FormularioModal}
           options={{ title: "📝 Formulário" }}
+        />
+        <Drawer.Screen
+          name="GaleriaHorizontal"
+          component={GaleriaHorizontal}
+          options={{ title: "📸 Galeria Horizontal" }}
+        />
+        <Drawer.Screen
+          name="ScrollInterativo"
+          component={ScrollInterativo}
+          options={{ title: "🕹️ Scroll Interativo" }}
         />
       </Drawer.Navigator>
     </NavigationContainer>
