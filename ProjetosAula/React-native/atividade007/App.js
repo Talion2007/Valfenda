@@ -19,6 +19,9 @@ import SafeAreaView from "./components/SafeAreaView";
 import ChatScreen from "./components/Keyboard";
 import Comentarios from "./components/Comentario";
 import ChatBot from "./components/chatbot";
+import FormularioModalDois from "./components/FormularioModal";
+import Tecladin from "./components/FormularioTeclado";
+import MeuComponente from "./components/Orientacao";
 const Drawer = createDrawerNavigator();
 // Componentes das telas
 // App principal
@@ -70,9 +73,24 @@ export default function App() {
           options={{ title: "🏠 Página Inicial" }}
         />
         <Drawer.Screen
+          name="Orientacao"
+          component={MeuComponente}
+          options={{ title: "📏 Orientação" }}
+        />
+        <Drawer.Screen
           name="ChatBot"
           component={ChatBot}
           options={{ title: "🤖 ChatBot" }}
+        />
+        <Drawer.Screen
+          name="Teclado"
+          component={Tecladin}
+          options={{ title: "⌨ Teclado" }}
+        />
+        <Drawer.Screen
+          name="FormularioDois"
+          component={FormularioModalDois}
+          options={{ title: "📝 Formulário" }}
         />
         <Drawer.Screen
           name="Comentários"
@@ -127,7 +145,7 @@ export default function App() {
         <Drawer.Screen
           name="Galeria"
           component={GaleriaModal}
-          options={{ title: "🖼 Galeria" }  }
+          options={{ title: "🖼 Galeria" }}
         />
         <Drawer.Screen
           name="Formulario"
